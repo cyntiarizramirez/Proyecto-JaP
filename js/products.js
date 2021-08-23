@@ -1,12 +1,18 @@
 const showList = (productos) =>{
-    debugger;
     const lista = document.createElement("ul");
     for (let producto of productos){
         const li_producto = document.createElement("li");
         li_producto.appendChild(
-        document.createTextNode(`${producto.name} ${producto.description} ${producto.cost} ${producto.currency} ${producto.soldCount}`)
+        document.createTextNode(`${producto.name}`)
         );
+        const informacion = document.createElement("ul");
+        const li_informacion = document.createElement("li");
+        li_informacion.appendChild(
+            document.createTextNode(`${producto.description}`)
+        );
+        li
         lista.appendChild(li_producto);
+        informacion.appendChild(li_informacion);
     }
     document.body.appendChild(lista);
 };
