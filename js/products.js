@@ -3,7 +3,6 @@ const showList = (productos) =>{
     for (let producto of productos){
         const li_producto = document.createElement("li");
     }
-    lista.appendChild(li_producto);
     document.body.appendChild(lista);
 }
 
