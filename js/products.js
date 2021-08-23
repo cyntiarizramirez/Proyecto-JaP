@@ -1,7 +1,15 @@
 const showList = (productos) =>{
+    debugger;
     const lista = document.createElement("ul");
     for (let producto of productos){
         const li_producto = document.createElement("li");
+        li_producto.appendChild(
+        document.createTextNode(`${producto.name}`)
+        const ul_producto = document.createElement("ul");
+        li_producto.appendChild(
+            document.createTextNode(`${producto.description}`)
+        )
+        );
         lista.appendChild(li_producto);
     }
     document.body.appendChild(lista);
