@@ -4,11 +4,7 @@ const showList = (productos) =>{
     for (let producto of productos){
         const li_producto = document.createElement("li");
         li_producto.appendChild(
-        document.createTextNode(`${producto.name}`)
-        const ul_producto = document.createElement("ul");
-        li_producto.appendChild(
-            document.createTextNode(`${producto.description}`)
-        )
+        document.createTextNode(`${producto.name} ${producto.description} ${producto.cost} ${producto.currency} ${producto.soldCount}`)
         );
         lista.appendChild(li_producto);
     }
