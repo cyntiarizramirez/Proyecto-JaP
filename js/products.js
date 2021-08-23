@@ -10,11 +10,11 @@ const showList = (productos) =>{
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(PRODUCTS_URL).then(function (resultProductos){
-        if (resultProductos.status === "ok"){
-            showList(resultProductos.data);
+    getJSONData(PRODUCTS_URL).then(function (resultProducts){
+        if (resultProducts.status === "ok"){
+            showList(resultProducts.data);
             console.log({
-                productos: resultProductos.data,
+                productos: resultProducts.data,
             });
         }
 
