@@ -3,14 +3,11 @@ const showList = (productos) =>{
     for (let producto of productos){
         const li_producto = document.createElement("li");
         li_producto.appendChild(
-        document.createTextNode(`${producto.name}`)
-        );
+        document.createTextNode(`${producto.name}`));
         const informacion = document.createElement("ul");
         const li_informacion = document.createElement("li");
         li_informacion.appendChild(
-            document.createTextNode(`${producto.description}`)
-        );
-        li
+            document.createTextNode(`${producto.description}`));
         lista.appendChild(li_producto);
         informacion.appendChild(li_informacion);
     }
