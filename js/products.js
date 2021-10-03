@@ -13,6 +13,7 @@ const showList = (productos) =>{
         const li_description = document.createElement("ul");
             li_description.appendChild(document.createTextNode(`${producto.description}`));
                 li_producto.appendChild(li_description);
+                
 
         
         const li_cost = document.createElement("li");
@@ -27,7 +28,6 @@ const showList = (productos) =>{
 document.body.appendChild(lista);
 };
 
-
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -41,5 +41,25 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
 
     })
+showproductsList()
+}) 
 
-});
+/*if (option.value === "Más relevantes") {
+    const productos_masrel = productos.sort((producto1, producto2) => {
+        producto2.soldCount - producto1.soldCount
+        })
+};
+
+if (option.value === "Menor precio") {
+    const productos_menprecio = productos.sort((producto1, producto2) =>{
+        producto1.cost - producto2.cost
+    })
+};
+
+if (option.value === "Mayor precio") {
+    const productos_mayprecio = productos.sort((producto1, producto2) => {
+        producto2.cost - producto1.cost
+    })
+};*/
+
+
