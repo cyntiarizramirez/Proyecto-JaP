@@ -7,7 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .checked {
+    color: orange;
+  }
+  </style>
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -22,7 +27,13 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="email" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <a class="dropdown-item" href="login.html">Cerrar sesión</a>
+      </div> 
     </div>
   </nav>
   
@@ -41,6 +52,8 @@
           <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
           </div>
         </dd>
+
+        
       </dl>
         <dt>Descripción:</dt>
         <dd>
@@ -67,10 +80,76 @@
           <p id="category" ></p>
         </dd>
         <dt>Productos relacionados:</dt>
-        <a id="relatedProducts"  href="products.html" ></a>
+        <a id="relatedProducts" >  </a>
     </div>
-  </main>
 
+    <hr class="my-3">
+  </main>
+  <div class="container mt-8">
+    <h4>Deja tu opinión acerca de este producto</h4>
+    <form>
+      <form>
+        <p class="clasificacion">
+          <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+        </p>
+        <style>
+          label{ color:grey;}
+          input[type = "radio"]{ display:none;}
+          .clasificacion{
+        direction: rtl;/* right to left */
+        unicode-bidi: bidi-override;/* bidi de bidireccional */
+        }
+          label:hover{color:orange;}
+          label:hover ~ label{color:orange;}
+          input[type = "radio"]:checked ~ label{color:orange;}
+        </style>
+      </form>
+      <div>
+        <label for="descripcion">Comentario:</label><br>
+        <input type="text" id="descripcion" name="descripcion" maxlength="200">
+      </div>
+    </br>
+      <input type="submit" value="Enviar">
+    </br>
+      <p id="fechaYHora"></p>
+      </form>
+    </br>
+    <!--<script>
+    var hoy = new Date();
+    var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
+    var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+    var fechaYHora = fecha + ' ' + hora;
+    console.log(fechaYHora);
+    document.getElementById("fechaYHora").innerHTML = htmlContentToAppend;
+    </script>-->
+  
+      
+    </form>
+  </div>
+  <div class="container mt-16">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-16">
+                <h3 id="Opiniones"> Opiniones</h3>
+                  <div  id="commentlist">
+                
+              </div>
+            </div>
+          </div>
+
+<div class="row">
+  <div class="list-group" id="commentlist">
+    
+  </div>
+</div>
 
   <br>
   <footer class="text-muted">

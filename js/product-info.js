@@ -1,5 +1,35 @@
 var product = {};
+var currentcommentsArray = [];
 
+function showrelacionados(array){
+    let htmlContentToAppend = "";
+    for(let i = 0; i < array.length; i++){
+        let relacionados = array[i];
+        htmlContentToAppend += `
+        <a href="product-info.html"> ` + relacionados + `</a>
+        `
+        document.getElementById("relatedProducts").innerHTML = htmlContentToAppend;
+    }
+}
+
+function showcomments(currentcommentsArray){
+
+    let htmlContentToAppend = "";
+    for(let i = 0; i < currentcommentsArray.length; i++){
+        let comment = currentcommentsArray[i];
+
+        htmlContentToAppend += `
+        
+        <div class="row">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div  <p class="text1">`+ comment.score +` <span class="fa fa-star checked"></span></p></div>
+                    <div class="user d-flex flex-row align-items-center">  <span><small class="font-weight-bold text-primary">` + comment.user + `</small> <small class="font-weight-bold">` + comment.description + ` </small></span> </div> <small align-right>  ` + comment.dateTime + ` </small>
+            </div>
+            </div>
+        `
+        document.getElementById("commentlist").innerHTML = htmlContentToAppend;
+    }
+}
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";
@@ -16,17 +46,6 @@ function showImagesGallery(array){
         `
 
         document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
-    }
-}
-
-function showrelacionados(array){
-    let htmlContentToAppend = "";
-    for(let i = 0; i < array.length; i++){
-        let relacionados = array[i];
-        htmlContentToAppend += `
-        <a> ` + relacionados + `</a>
-        `
-        document.getElementById("relatedProducts").innerHTML = htmlContentToAppend;
     }
 }
 
@@ -56,6 +75,20 @@ document.addEventListener("DOMContentLoaded", function(e){
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
             showrelacionados(product.relatedProducts);
+        }
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function (e) {
+    getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultcomments){
+        if (resultcomments.status === "ok"){
+            showcomments(resultcomments.data);
+
+            console.log({
+                productos: resultcomments.data,
+            });
         }
     });
 });

@@ -48,9 +48,10 @@ document.addEventListener("DOMContentLoaded", function (e){
   if(!localStorage.getItem("email"))
         {window.location.href="login.html";}
   console.log(localStorage.getItem("email"))
-});
-  document.getElementById("email").innerHTML = localStorage.getItem("email")
   
+});
+
+document.getElementById("email").innerHTML = localStorage.getItem("email");
 /*function myFunction(){
   var x = localStorage.getItem("useremail");
   document.getElementById("user").innerHTML = x;};*/
