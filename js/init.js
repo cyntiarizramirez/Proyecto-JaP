@@ -1,3 +1,4 @@
+"use strict";
 const CATEGORIES_URL = "https://japdevdep.github.io/ecommerce-api/category/all.json";
 const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
 const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
@@ -45,22 +46,13 @@ var getJSONData = function(url){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e){
-  if(!localStorage.getItem("email"))
+  if(!localStorage.getItem("usuario"))
         {window.location.href="login.html";}
-  console.log(localStorage.getItem("email"))
+console.log(localStorage.getItem("usuario"))
   
 });
 
-document.getElementById("email").innerHTML = localStorage.getItem("email");
-/*function myFunction(){
-  var x = localStorage.getItem("useremail");
-  document.getElementById("user").innerHTML = x;};*/
-
-/*email = localStorage.getItem("email")
-  const a_email = document.createElement("a")
-  a_email.appendChild(document.createElement(email));
-  barra.appendChild("a", a_email)*/
+document.getElementById("usuario").innerHTML = localStorage.getItem("usuario");
 
 
-
-  
+console.log("la data es" + (localStorage.getItem("data")));

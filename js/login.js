@@ -1,17 +1,17 @@
 const Submit = () => {
 
-const txtemail = document.getElementById("email"); 
+const txtusuario = document.getElementById("usuario"); 
 const txtpassword = document.getElementById("pwd"); 
-const email = txtemail.value;
+const usuario = txtusuario.value;
 const password = txtpassword.value;
-if (email && password) { 
-    txtemail.value=="email";
+if (usuario && password) { 
+    txtusuario.value=="usuario";
      txtpassword.value=="password";
-localStorage.setItem("email", email);
+localStorage.setItem("usuario", usuario);
 window.location.href ="index.html";
 } 
 else{
-alert("Ingrese email y contraseña correspondientes");
+alert("Ingrese usuario y contraseña correspondientes");
 }
 }
 

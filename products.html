@@ -12,6 +12,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    
   </head>
   <body>
     <nav class="site-header sticky-top py-1 bg-dark">
@@ -20,12 +21,12 @@
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="email" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
             <a class="dropdown-item" href="cart.html">Mi carrito</a>
-            <a class="dropdown-item" href="login.html">Cerrar sesión</a>
+            <a class="dropdown-item" href="login.html" onclick="localStorage.clear();" >Cerrar sesión</a>
         </div>
       </div>
     </nav>
@@ -48,7 +49,27 @@
         <input type="submit" value="buscar" id="submit">
         
         </div>
-      </main>
+        <br>
+
+        <main role="main">
+          <div class="container px-lg-5" >
+            <div class="row mx-lg-n5" id= listaproductos>
+                <div class="col py-3 px-lg-5 border bg-light ">
+                    <a class="card md-4 shadow-sm custom-card" >
+                      <img class="bd-placeholder-img card-img-top">
+                      <h3 class="m-3"></h3>
+                      <div class="card-body">
+                        <p class="card-text"></p>
+                      </div>
+                    </a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      
+      <!--</main>
               </div>
           </div>
          
@@ -58,7 +79,7 @@
               </div>
           </div>
       </div>
-  </main>
+  </main>-->
     <footer class="text-muted bg-light">
       <div class="container">
         <p class="float-right">
