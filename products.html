@@ -12,6 +12,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    
   </head>
   <body>
     <nav class="site-header sticky-top py-1 bg-dark">
@@ -20,24 +21,70 @@
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+            <a class="dropdown-item" href="cart.html">Mi carrito</a>
+            <a class="dropdown-item" href="login.html" onclick="localStorage.clear();" >Cerrar sesión</a>
+        </div>
       </div>
     </nav>
-    <div class="container p-5">
-      <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-        <h4 class="alert-heading">¡A trabajar! :)</h4>
-        <p>Esta sección corresponde a: Entrega 1 (Fecha de entrega: 22/08/2021) y Entrega 2 (Fecha de entrega: 05/09/2021).</p>
-        <hr>
-        <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <main role="main" class="pb-5">
+      <div class="text-center p-4">
+          <h2 >Productos</h2>
+          <p class="lead">Verás aquí todos lo que puedes comprar.</p>
       </div>
-    </div>
+      <div class="container">
+        Ordenar por <select>
+          <option value="Menor precio">Menor precio</option>
+          <option value="Mayor precio">Mayor precio</option>
+          <option value="Más relevantes">Más relevantes</option>
+        </select>
+      </br>
+      </br>
+      Precio 
+        <input type="text" id="pmin" name="pmin" placeholder="Mínimo" size="6">
+        <input type="text" id="pmax" name="pmax" placeholder="Máximo" size="6">
+        <input type="submit" value="buscar" id="submit">
+        
+        </div>
+        <br>
+
+        <main role="main">
+          <div class="container px-lg-5" >
+            <div class="row mx-lg-n5" id= listaproductos>
+                <div class="col py-3 px-lg-5 border bg-light ">
+                    <a class="card md-4 shadow-sm custom-card" >
+                      <img class="bd-placeholder-img card-img-top">
+                      <h3 class="m-3"></h3>
+                      <div class="card-body">
+                        <p class="card-text"></p>
+                      </div>
+                    </a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      
+      <!--</main>
+              </div>
+          </div>
+         
+          <div class="row">
+              <div class="list-group" id="listaproductos">
+                
+              </div>
+          </div>
+      </div>
+  </main>-->
     <footer class="text-muted bg-light">
       <div class="container">
         <p class="float-right">
           <a href="#">Volver arriba</a>
         </p>
-        <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
     </footer>
     <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
