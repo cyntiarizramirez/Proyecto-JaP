@@ -27,6 +27,9 @@
         font-size: 3.5rem;
       }
     }
+    input[type='number']{
+    width: 60px;
+} 
   </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -53,7 +56,7 @@
 <h4>Carrito de compras</h4>
 <br>
 <div>
-  <table class="table table-bordered">
+  <table class="table table-bordered" id="tabla">
     <thead>
       <tr>
         <th scope="col"></th>
@@ -66,11 +69,11 @@
         <th scope="col">Total</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="tbody">
       <tr>
-        <th scope="row" ><input type="image" id="imagen"></th>
+        <th scope="row"  ><div class="row text-center text-lg-left pt-2"id="imagen" ></th>
         <td id="nombre"></td>
-        <td><input type="button" id="resta" value="-"> <textarea id="cant" size="2" rows="1" cols="1"></textarea> <input type="button" id="suma" value="+"></td>
+        <td> <input type="number" id="cant" min="1"></td>
         <td id="moneda"></td>
         <td id="precio"></td>
         <td id="subt"></td>
@@ -110,7 +113,51 @@
     <input type="text" id="esq" name="esq"><br>
     <label for="pais">País:</label>
     <input type="text" id="pais" name="pais"><br>
+    <br>
   </form>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+  Finalizar compra
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Para finalizar su compra seleccione el modo de pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="radio" id="credito" name="pago" >
+        <label for="credito">Tarjeta de crédito</label><br>
+        <label for="num">Número de tarjeta:</label>
+        <input type="text" id="num" name="num"><br>
+        <label for="pais">Nombre y apellido:</label>
+        <input type="text" id="nombreyap" name="nombreyap"><br>
+        <label for="fechav">Fecha de vencimineto:</label>
+        <input type="text" id="fechav" name="fechav"><br>
+        <label for="codigo">Código de seguridad:</label>
+        <input type="text" id="codigo" name="codigo"><br>
+        <label for="ci">CI del titular de la tarjeta:</label>
+        <input type="text" id="ci" name="ci"><br>
+
+        <input type="radio" id="transferencia" name="pago" >
+        <label for="transferencia">Transferencia bancaria</label><br>
+        <label for="cuentab">Número de cuenta:</label>
+        <input type="text" id="cuentab" name="cuentab"><br>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
   
   
   
