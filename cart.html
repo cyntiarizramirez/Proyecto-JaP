@@ -27,6 +27,9 @@
         font-size: 3.5rem;
       }
     }
+    input[type='number']{
+    width: 60px;
+} 
   </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -49,9 +52,6 @@
       </div>
     </div>
   </nav>
-<<<<<<< Updated upstream
-
-=======
 <br>
 <h4>Carrito de compras</h4>
 <br>
@@ -74,7 +74,7 @@
         <th scope="row"  ><div class="row text-center text-lg-left pt-2"id="imagen" ></th>
         <td id="nombre"></td>
         <td> <input type="number" id="cant" min="1"></td>
-        <td id="moneda" ></td>
+        <td id="moneda"></td>
         <td id="precio"></td>
         <td id="subt"></td>
         <td id="envio"></td>
@@ -101,7 +101,7 @@
 </div>
   <br>
 <div>
-  <form id="formEnvio">
+  <form>
     <h6>Ingrese los datos para su envío</h6>
     <br>
     <label for="adress">Calle:</label>
@@ -112,15 +112,15 @@
     <input type="text" id="ap" name="ap"><br>
     <label for="esq">Esquina:</label>
     <input type="text" id="esq" name="esq"><br>
-    <label for="ciud">Ciudad:</label>
-    <input type="text" id="ciud" name="ciud"><br>
     <label for="pais">País:</label>
     <input type="text" id="pais" name="pais"><br>
+    <label for="Ciudad">Ciudad:</label>
+    <input type="text" id="ciud" name="Ciudad">
     <br>
   </form>
 
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="fin">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
   Finalizar compra
 </button>
 
@@ -135,8 +135,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="formPago">
-        <input type="radio" id="credito" name="pago" value="" checked="checked">
+        <input type="radio" id="credito" name="pago" value="" checked="checked" >
         <label for="credito">Tarjeta de crédito</label><br>
         <label for="num">Número de tarjeta:</label>
         <input type="text" id="num" name="num"><br>
@@ -153,12 +152,11 @@
         <label for="transferencia">Transferencia bancaria</label><br>
         <label for="cuentab">Número de cuenta:</label>
         <input type="text" id="cuentab" name="cuentab"><br>
-      </form>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary" id="confirmar">Confirmar</button>
+        <button type="button" id="confirmar" class="btn btn-primary">Confirmar</button>
       </div>
     </div>
   </div>
@@ -167,7 +165,6 @@
   
   
   
->>>>>>> Stashed changes
       <div></div>
       <div></div>
       <div></div>

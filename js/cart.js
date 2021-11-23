@@ -4,19 +4,14 @@
 let articles = [];
 document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch (
-    "https://japdevdep.github.io/ecommerce-api/cart/987.json"
-    );
+    "https://japdevdep.github.io/ecommerce-api/cart/987.json");
     articles = (await response.json()).articles;
-    console.log(articles)
-    
+    console.log(articles)  
+    mostrarArticles(articles) 
 });
 
-<<<<<<< Updated upstream
-=======
-  const mostrarArticles = articles => {
-    console.log(articles)
+const mostrarArticles = articles => {
     articles.forEach(article =>{
-      console.log(article)
       document.getElementById("imagen").innerHTML = `<img src="` + article.src + `" alt="Imagen del articulo">
       `;
       document.getElementById("nombre").innerHTML = article.name;
@@ -24,57 +19,45 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById("moneda").innerHTML = article.currency;
       document.getElementById("precio").innerHTML = article.unitCost;
       document.getElementById("subt").innerHTML = article.unitCost * document.getElementById("cant").value;
-      
+    
+
 var cant = document.getElementById('cant');
 
 var updatesubt = function () {
       document.getElementById("subt").innerHTML = article.unitCost * cant.value;    
 };
-
-var costoEnvio = function (){
-  if(document.getElementById('standard').checked){
-    document.getElementById('envio').innerHTML = +document.getElementById("subt").innerHTML * 5 / 100;
-  }
-  if(document.getElementById('express').checked){
-    document.getElementById('envio').innerHTML = +document.getElementById("subt").innerHTML * 7 / 100;
-  }
-  if(document.getElementById('premium').checked){
-    document.getElementById('envio').innerHTML = +document.getElementById("subt").innerHTML * 15 / 100;
-  }
-};
-
-var updatetotal = function(){
-      document.getElementById('total').innerHTML = +document.getElementById("subt").innerHTML + +document.getElementById("envio").innerHTML ;    
-  };
-
-    window.onload = function() {
-        costoEnvio();
-        updatetotal();
-}();
-    cant.addEventListener('input', function () {
-        updatesubt();
-        costoEnvio();
-        updatetotal();
-        
-});
-    $(document).ready(function(){
-  $('input[type=radio]').click(function(){
+cant.addEventListener('input', function () {
+    updatesubt();
     costoEnvio();
     updatetotal();
 });
 });
-
-});
-  
+var costoEnvio = function (){
+    if(document.getElementById('standard').checked){
+      document.getElementById('envio').innerHTML = +document.getElementById("subt").innerHTML * 5 / 100;
+    }
+    if(document.getElementById('express').checked){
+      document.getElementById('envio').innerHTML = +document.getElementById("subt").innerHTML * 7 / 100;
+    }
+    if(document.getElementById('premium').checked){
+      document.getElementById('envio').innerHTML = +document.getElementById("subt").innerHTML * 15 / 100;
+    }
+  };
+var updatetotal = function(){
+    document.getElementById('total').innerHTML = +document.getElementById("subt").innerHTML + +document.getElementById("envio").innerHTML ;    
 };
+window.onload = function() {
+    costoEnvio();
+    updatetotal();
+}();
 
-
-
-
-
-
-
-
+$(document).ready(function(){
+$('input[type=radio]').click(function(){
+costoEnvio();
+updatetotal();
+});
+});
+};
 
 
 const expresiones = {
@@ -113,8 +96,6 @@ if(!expresiones.ciudad.test(document.getElementById("ciud").value)){
 if(!expresiones.pais.test(document.getElementById("pais").value)){
   alert("El nombre del país debe contener letras!");
 }
-
-
 };
 
 
@@ -138,8 +119,6 @@ if(!expresiones.ci.test(document.getElementById("ci").value)){
 else{
   alert("Su compra ha sido realizada con éxito");
 }
-
-
 }
 if(document.getElementById('transferencia').checked){
   if(!expresiones.nCuenta.test(document.getElementById("cuentab").value)){
@@ -155,4 +134,3 @@ document.getElementById("confirmar").addEventListener("click", function() {
   validarprim();
   validarformpago();
 });
->>>>>>> Stashed changes
