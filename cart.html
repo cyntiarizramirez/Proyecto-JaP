@@ -49,7 +49,125 @@
       </div>
     </div>
   </nav>
+<<<<<<< Updated upstream
 
+=======
+<br>
+<h4>Carrito de compras</h4>
+<br>
+<div>
+  <table class="table table-bordered" id="tabla">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Moneda</th>
+        <th scope="col">Precio por unidad</th>
+        <th scope="col">Subtotal</th>
+        <th scope="col">Envío</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr>
+        <th scope="row"  ><div class="row text-center text-lg-left pt-2"id="imagen" ></th>
+        <td id="nombre"></td>
+        <td> <input type="number" id="cant" min="1"></td>
+        <td id="moneda" ></td>
+        <td id="precio"></td>
+        <td id="subt"></td>
+        <td id="envio"></td>
+        <td id="total"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+<h6>Seleccione el tipo de envío que desea</h6>
+  
+    <input type="radio" id="standard" name="envio" value="" checked="checked" >
+    <label for="standard">Standard (12 a 15 días) - Costo del %5 sobre el subtotal</label>
+  </div>
+  <div>
+    <input type="radio" id="express" name="envio" >
+    <label for="express">Express (5 a 8 días) - Costo del %7 sobre el subtotal</label>
+  </div>
+  <div>
+    <input type="radio" id="premium" name="envio" >
+    <label for="premium">Premium (2 a 5 días) - Costo del %15 sobre el subtotal</label>
+  </div>
+
+</div>
+  <br>
+<div>
+  <form id="formEnvio">
+    <h6>Ingrese los datos para su envío</h6>
+    <br>
+    <label for="adress">Calle:</label>
+    <input type="text" id="adress" name="adress"><br>
+    <label for="number">Número de puerta:</label>
+    <input type="text" id="number" name="number"><br>
+    <label for="ap">Apartamento:</label>
+    <input type="text" id="ap" name="ap"><br>
+    <label for="esq">Esquina:</label>
+    <input type="text" id="esq" name="esq"><br>
+    <label for="ciud">Ciudad:</label>
+    <input type="text" id="ciud" name="ciud"><br>
+    <label for="pais">País:</label>
+    <input type="text" id="pais" name="pais"><br>
+    <br>
+  </form>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop" id="fin">
+  Finalizar compra
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Para finalizar su compra seleccione el modo de pago</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="formPago">
+        <input type="radio" id="credito" name="pago" value="" checked="checked">
+        <label for="credito">Tarjeta de crédito</label><br>
+        <label for="num">Número de tarjeta:</label>
+        <input type="text" id="num" name="num"><br>
+        <label for="pais">Nombre y apellido:</label>
+        <input type="text" id="nombreyap" name="nombreyap"><br>
+        <label for="fechav">Fecha de vencimineto:</label>
+        <input type="text" id="fechav" name="fechav"><br>
+        <label for="codigo">Código de seguridad:</label>
+        <input type="text" id="codigo" name="codigo"><br>
+        <label for="ci">CI del titular de la tarjeta:</label>
+        <input type="text" id="ci" name="ci"><br>
+
+        <input type="radio" id="transferencia" name="pago" >
+        <label for="transferencia">Transferencia bancaria</label><br>
+        <label for="cuentab">Número de cuenta:</label>
+        <input type="text" id="cuentab" name="cuentab"><br>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="confirmar">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  
+  
+>>>>>>> Stashed changes
       <div></div>
       <div></div>
       <div></div>
